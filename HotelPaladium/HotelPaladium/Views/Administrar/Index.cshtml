@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "IndexA";
+}
+<script src="~/Scripts/jquery-1.6.2.js"></script>
+        <script>
+            $(document).ready(function () {
+                //alert("hola");
+                $(".container .left-container").show(1200, function(){
+                    $(".container .left-container").css("width", "100%");
+                });
+                $(".container .right-container .adds").toggle(2000);
+            });
+        </script>
+@if (Request.IsAuthenticated) {
+    <div id="ventanaPopup1">
+            <a id="ventanaPopup1Cerrar">x</a>
+            <h1 class="loginH">Bienvenido <br /><br />
+                <p>
+                    @Html.ActionLink(User.Identity.Name, "ChangePassword", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Cambiar contraseña" })!
+                </p>
+            </h1>
+      </div>
+      <div id="ventanaPopup1Fondo"></div>
+    <p class="name">
+        ¡Hola, @Html.ActionLink(User.Identity.Name, "ChangePassword", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Cambiar contraseña" })!
+        <label >@Html.ActionLink("Log off", "LogOff", "Account")</label>
+    </p>
+}
+else
+{
+    <ul>
+        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}
+<div id="menuA">
+    <ul id="menu-nav" class="center">
+        <li class="active"><a title="Dashboard" href="/dashboard">Dashboard</a></li>
+        <li><a title="Reservas" href="/bookings">Reservas</a></li>
+        <li><a title="Clientes" href="/clients/status">Clientes</a></li>
+        <li><a title="Administración" href="/rooms">Administración</a></li>
+        <li id="new-reservation"><a title="Nueva Reserva" href="#">Nueva Reserva</a></li>
+    </ul>
+</div>
+<div class="menu2">&nbsp;</div>
+<div class="container-left">
+    <div class="entry">
+        izquierdo
+    </div>
+</div>
+<div class="container-right">
+    <div class="adds">
+        derecho
+    </div>
+</div>

@@ -1,0 +1,73 @@
+﻿<script src="~/Scripts/jquery-1.6.2.js"></script>
+<link rel="stylesheet" href="@Url.Content("~/Css/stylePopUP.css")">
+<script type="text/javascript">
+//Configuramos el evento de carga de página, se ejecuta solamente 1 vez cuando la página cargo por completo
+    $(document).ready(function () {
+        centraVentana();
+        muestraVentana();
+        //Agregamos el evento "click" del div: ventanaPopup1Cerrar
+        $("#ventanaPopup1Cerrar").click(function () {
+            ocultaVentana();
+        });
+        //Agregamos el evento "click" del div: ventanaPopup1Fondo
+        $("#ventanaPopup1Fondo").click(function () {
+            ocultaVentana();
+        });
+    });
+ 
+    function centraVentana() {
+        //Obtenemos ancho y alto del navegador, y alto y ancho de la popUp
+        var windowWidth = document.documentElement.clientWidth;
+        var windowHeight = document.documentElement.clientHeight;
+        var popupHeight = $("#ventanaPopup1").height();
+        var popupWidth = $("#ventanaPopup1").width();
+        //centering
+        $("#ventanaPopup1").css({
+            "position": "absolute",
+            "top": windowHeight/2-popupHeight/2,
+            "left": windowWidth/2-popupWidth/2
+        });
+ 
+        //Solo se necesita para IE6
+        $("#ventanaPopup1Fondo").css({
+            "height": windowHeight
+        });
+    }
+ 
+    function ocultaVentana() {
+        $("#ventanaPopup1Fondo").fadeOut("slow");
+        $("#ventanaPopup1").fadeOut("slow");
+    }
+ 
+    function muestraVentana() {
+        $("#ventanaPopup1Fondo").css({
+            "opacity": "0.7"
+        });
+        $("#ventanaPopup1Fondo").fadeIn("slow");
+        $("#ventanaPopup1").fadeIn("slow");
+    }
+</script>
+
+
+@if (Request.IsAuthenticated) {
+    <div id="ventanaPopup1">
+            <a id="ventanaPopup1Cerrar">x</a>
+            <h1 class="loginH">Bienvenido <br /><br />
+                <p>
+                    @Html.ActionLink(User.Identity.Name, "ChangePassword", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Cambiar contraseña" })!
+                </p>
+            </h1>
+      </div>
+      <div id="ventanaPopup1Fondo"></div>
+    <p class="name">
+        ¡Hola, @Html.ActionLink(User.Identity.Name, "ChangePassword", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Cambiar contraseña" })!
+        <label >@Html.ActionLink("Log off", "LogOff", "Account")</label>
+    </p>
+}
+else
+{
+    <ul>
+        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

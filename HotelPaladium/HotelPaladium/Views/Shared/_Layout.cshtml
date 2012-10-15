@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="@Url.Content("~/Css/style.css")">
+        @Styles.Render("~/Content/themes/base/css", "~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="header">
+                <header>
+                    <div class="content-wrapper">
+                        <div class="float-left">
+                                <h1 class="title site-title">
+                                    @Html.ActionLink("Hotel Paladium", "Index", "Home")
+                                </h1>
+                        </div>
+                        <div class="float-right">
+                            <section id="login" class="login">
+                                @Html.Partial("_LoginPartial")
+                            </section>
+                            <nav>
+                                <ul id="menu">
+                                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                    <li>@Html.ActionLink("Habitaciones", "Habitaciones", "Home")</li>
+                                    <li>@Html.ActionLink("Reservas", "Reservas", "Home")</li>
+                                    <li>@Html.ActionLink("Servicios", "Servicios", "Home")</li>
+                                    <li>@Html.ActionLink("Galeria", "Galeria", "Home")</li>
+                                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div id="body" class="main">
+				<div class="container">
+                     <div class="left-container">
+                        <div class="entry">
+                            <section class="content-wrapper main-content clear-fix">
+                                @RenderBody()
+                            </section>
+                        </div>
+                    </div>
+                    <div class="right-container">
+                        <div class="adds">
+                            propagando
+                        </div>
+                    </div>
+                    @RenderSection("featured", required: false)
+				</div>
+			</div>
+        <footer>
+                <div class="footer">
+                    <div class="float-left">
+                        <p class="footer_copy">
+					        @Html.ActionLink("Home", "Index", "Home")&nbsp;|
+					        @Html.ActionLink("Contact", "Contact", "Home")&nbsp;|
+					        &copy; Copyright @DateTime.Now.Year - My ASP.NET MVC Application-by AlfredQ
+				        </p>
+                    </div>
+                    <div class="float-right">
+                        <ul id="social">
+                            <li><a href="http://facebook.com" class="facebook">Facebook</a></li>
+                            <li><a href="http://twitter.com" class="twitter">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </footer>
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+        </div>
+    </body>
+</html>

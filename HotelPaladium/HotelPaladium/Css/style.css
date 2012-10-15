@@ -1,0 +1,298 @@
+* {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+body {
+	font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.contenedor{
+	min-width: 100px;
+    overflow: hidden;
+    padding-top: 1px;
+    background: -moz-linear-gradient(center top , #A3B8C9 0%, #414E5E 99%) repeat scroll 0 0 transparent;
+    box-shadow: 0 10px 50px -3px #000000;
+    line-height: normal;
+    margin: 0 auto;
+    text-align: left;
+}
+.left-container {
+  float:left;
+  margin:0 2px 0 0;
+  width:70%;
+}
+.right-container {
+  float:right;
+  margin:0;
+  padding:0;
+  width:28%;
+}
+.container-left {
+    display:block;
+    float:left;
+    margin:0 2px 0 0;
+    width:18%;
+}
+.container-right {
+    float:right;
+    margin:0;
+    padding:0;
+    width:80%;
+}
+.entry {
+  background-color:#FFFFFF;
+  background-position:initial initial;
+  background-repeat:initial initial;
+  border:1px solid #DDDDDD;
+  margin:0 0 10px;
+  padding:5px;
+  text-align: justify;
+}
+.adds {
+  background-color:#FFFFFF;
+  background-position:initial initial;
+  background-repeat:initial initial;
+  border:1px solid #DDDDDD;
+  margin:0 0 10px;
+  padding:5px 5px 5px 12px;
+}
+.main {
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 5px #CCCCCC;
+    box-shadow: 0 10px 50px -3px #000000;
+    clear: both;
+    overflow: hidden;
+    margin: 14px;
+    margin-top:15px;
+}
+.main .container {
+    background-color: #FFFFFF;
+    border: 1px solid #D2D2CF;
+    overflow: hidden;
+    padding: 15px;
+}
+nav{
+	margin: 0 auto;
+	height: 110px;
+	/*background: none repeat scroll 0 0 transparent;*/
+	width: 600px;
+	border-bottom-color:#999999;
+	float: right;
+}
+nav ul{
+	color:#CC9E66;
+	list-style: none outside none;
+	position: relative;
+    margin: 0;
+}
+
+nav li {
+	color:#CC9E66;
+	margin: 0px;
+	list-style: none;
+	line-height:1;
+	float: left;
+	position: relative;
+}
+
+nav a{
+	text-decoration: none;
+	display: inline-block;
+	color:#CC9E66;
+	vertical-align: baseline;
+}
+nav a:hover, nav a:active{
+	color: #E68A00;
+	font-style: italic;
+	font-weight:bold;
+	background: none repeat scroll 0 0 transparent;
+}
+
+.menu {
+    margin-right: -125px;
+    margin-top:10px;
+    font: 1em/120% trebuchet MS;
+    height: 1em;
+    padding: 0 0.5em 0.2em 0.2em;
+}
+.menu ul li{
+	text-transform: uppercase;
+}
+.menu ul li a{
+	display:block;
+}
+menu2{
+    background:#000000;
+    border:2px;
+    border-radius:5px;
+    height:60px;
+    padding-top: 1px;
+    box-shadow: 0 10px 50px -3px #000000;
+    line-height: normal;
+    margin: 0 auto;
+    float:left;
+}
+
+.login{
+    margin-left: 860px;
+    font: 1em/120% trebuchet MS;
+    height: 1em;
+    padding: 0 0.5em 0.2em 0.2em;
+}
+.login ul li{
+	float: right;
+	margin: 5px;
+	list-style: none;
+	display: block;
+	background:#3C2E19;
+	box-shadow: 0 0 5px #CCCCCC;
+	border-radius:5px;
+}
+.login ul.navbar a {
+	margin-left:5px;
+	margin-right:5px;
+	margin-bottom:5px;
+    text-decoration: none;
+}
+.login ul li a{
+	list-style:none;
+	display: block;
+	color:#CC9E66;
+}
+.login ul li a:hover{
+	color: #E68A00;
+	font-style: italic;
+	font-style: inherit;
+}
+.loginH {
+    text-decoration: none;
+    text-align:center;
+    margin-top:5px;
+}
+.loginH p a{
+    color:#6fa5fd;
+    cursor:none;
+    text-decoration:none;
+    list-style:none;
+    
+}
+h1.title {
+    -moz-transform: rotate(-3deg);
+    color: #FFFFFF;
+    line-height: 54px;
+    position: relative;
+}
+h1.title a{
+	color: #FFFFFF;
+	text-decoration: none;
+    background:none;
+}
+h1.title, h1.shadow {
+    font-family: Georgia;
+    font-size: 40px;
+    font-style: italic;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    position: absolute;
+    text-shadow: none;
+    top: 15px;
+    width: 300px;
+    text-shadow: 0 0 5px #CECCCC;
+    margin-left: 25px;
+    margin-top: 12px;
+}
+h1 {
+    font-size: 30px;
+}
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+.header{
+	background-color: #414E5E;
+	height: 100px;
+}
+.header_img{
+	/*background: url("../images/hp-slate1.jpg") no-repeat scroll 50% 1em #6D6666;*/
+	box-shadow: 10px 10px 5px #888888;
+	position: absolute;
+}
+.header_img img{
+	position:absolute;
+	margin-top:65px;
+	margin-left:150px;
+	width:120px;
+	height:70px;
+}
+.footer {
+    padding-top: 25px;
+    width:100%;
+    position: absolute;
+    background-color: #585858;
+    height: 35px;
+    color: #CCCCCC;
+    text-align: center;
+    box-shadow: 0 0 5px #CCCCCC;
+	border-radius:5px;
+	font: 1em/120% trebuchet MS;
+	margin-top:10px;
+    text-align:center;
+}
+.footer a{
+	margin-bottom: 15px;
+	color: #CC9E66;
+	text-decoration: none;
+}
+    .footer .float-left .footer_copy a {
+        color: #CC9E66;
+    }
+    .footer .float-left .footer_copy a:hover, a:active{
+        color: #E68A00;
+        background: none repeat scroll 0 0 transparent;
+    }
+.footer_copy {
+    margin-left:5px;
+}
+p.name {
+    color:#E68A00;
+}
+    p.name a {
+        color:#E68A00;
+    }
+
+#menuA, .bookings_menu {
+    background: url("/images/back/menu.jpg") repeat-x scroll 0 -1px #FFFFFF;
+    height: 37px;
+}
+#menu-nav li.active, .bookings_menu li.active {
+    border-bottom-color: #FFFFFF;
+}
+#menu-nav li, .bookings_menu li {
+    height: 38px;
+}
+#menu-nav li, .bookings_menu li {
+    border-right: 1px solid #DEDEDE;
+    display: block;
+    float: left;
+    height: 37px;
+    line-height: 36px;
+    margin-top: 1px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    list-style: none outside none;
+}
+    #menu-nav li, .bookings_menu li a {
+        color: #CC9E66;
+        text-decoration:none;
+        display: inline-block;
+        vertical-align: baseline;
+    }
+#new-reservation {
+    height: 35px;
+    position: relative;
+    right: 0;
+    text-align: center;
+    top: 0;
+    margin-left:45%;
+}
